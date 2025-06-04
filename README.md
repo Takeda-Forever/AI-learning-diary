@@ -87,31 +87,22 @@ Q(s,a)=Q(s,a)+α⋅(reward+γ⋅maxQ(s′,a′)−Q(s,a))
 
 
 Например формула награды:
-
+```cpp
 reward = alpha * newReward + (1 - alpha) * oldReward;
-
+```
 Мы не особо верим будущей награде, больше верим прошлой. У нас альфа равен 0.1, поэтому мы не особо спешим верит новой награде, а делаем медленные шаги.
 
 Пример с значениями:
-```cpp
+```vbnet
 Episode 0, State 0, Action 0, Reward 0, Updated Q = 0
-
 Episode 1, State 1, Action 0, Reward 0, Updated Q = 0
-
 Episode 2, State 2, Action 1, Reward 1, Updated Q = 0.1
-
 Episode 3, State 3, Action 0, Reward 0.9, Updated Q = 0.09
-
 Episode 4, State 4, Action 1, Reward 1.81, Updated Q = 0.181
-
 Episode 5, State 0, Action 1, Reward 2.629, Updated Q = 0.2629
-
 Episode 6, State 1, Action 1, Reward 3.3661, Updated Q = 0.34561
-
 Episode 7, State 2, Action 0, Reward 3.02949, Updated Q = 0.311049
-
 Episode 8, State 3, Action 0, Reward 2.72654, Updated Q = 0.369944
-
 Episode 9, State 4, Action 1, Reward 3.45389, Updated Q = 0.53195
 ```
 ```cpp
