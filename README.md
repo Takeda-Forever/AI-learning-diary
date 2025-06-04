@@ -114,8 +114,7 @@ double newReward = (action == 1) ? 10.0 : 0.0;
 Расчеты:
 ```vbnet
 reward = 0.1 * 10 + (1 - 0.1) * 0;
-
          1 + 0.9 * 0
-         
          1 = reward
 ```
+
